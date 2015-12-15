@@ -35,7 +35,7 @@ import importlib
 import math
 sys_platform = sys.platform.rstrip('2') # "linux2" on python < 3.3...
 platform = sys_platform + str(int(round(math.log(sys.maxint, 2)+1)))
-_PyV8 = importlib.import_module('PyV8.{platform}._PyV8'.format(platform=platform))
+_PyV8 = importlib.import_module('.{platform}._PyV8'.format(platform=platform), package=__name__)
 
 __author__ = 'Flier Lu <flier.lu@gmail.com>'
 __version__ = '1.0'
