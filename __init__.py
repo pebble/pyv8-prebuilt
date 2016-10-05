@@ -151,7 +151,8 @@ class JSSyntaxError(JSError, SyntaxError):
                 break
             start = src.rfind('\n', 0, start)
             start = 0 if start == -1 else start
-        start += 1  # Skip the newline
+        if start != 0:
+            start += 1  # Skip the newline
         end = src.find('\n', self.endPos)
         end = (len(src) - 1) if end == -1 else end
         hint += src[start:end] + '\n'
