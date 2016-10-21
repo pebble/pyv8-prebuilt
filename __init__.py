@@ -170,7 +170,7 @@ _PyV8._JSError._jsclass_TypeError = JSTypeError
 _PyV8._JSError._jsclass_SyntaxError = JSSyntaxError
 _PyV8._JSError._jsclass_RangeError = JSRangeError
 _PyV8._JSError._jsclass_InternalError = JSInternalError
-
+setattr(_PyV8._JSError, '', JSError)
 
 JSObject = _PyV8.JSObject
 JSNull = _PyV8.JSNull
