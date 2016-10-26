@@ -172,7 +172,7 @@ _PyV8._JSError._jsclass_RangeError = JSRangeError
 _PyV8._JSError._jsclass_InternalError = JSInternalError
 
 # Work-around for bug here https://github.com/pebble/pyv8/blob/master/src/Exception.cpp#L375-L378
-# that ends up trying to pull an emptry string out of the object:
+# that ends up trying to pull an empty string out of the object:
 setattr(_PyV8._JSError, '', JSError)
 
 JSObject = _PyV8.JSObject
